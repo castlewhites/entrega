@@ -18,7 +18,7 @@ import AboutUs from "../pages/AboutUs";
 function RoutesApp() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<Main />} />
         </Routes>
@@ -39,10 +39,6 @@ function RoutesApp() {
         </Routes>
      {/*   
       
-       
-        <Routes>
-          <Route path="/Te-interesa" element={<TeInteresa />} />
-        </Routes>
         <Routes>
           <Route path="/About-us" element={<AboutUs />} />
         </Routes> */}

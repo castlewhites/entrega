@@ -8,7 +8,7 @@ import CardHG from "../../Components/CardHG/Index";
 
 
 function TeInteresa() {
-  const palabras = ["hermosa", "princesa", "mia", "brillante"];
+  const palabras = ["hermosa", "princesa", "preciosa", "brillante"];
   const [win, setWin] = useState(0);
   
 

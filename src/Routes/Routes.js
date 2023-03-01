@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from "../Pages/Main";
 import Login from "../Pages/Login";
 import Inicio from "../Pages/Inicio/Index";
@@ -18,9 +18,9 @@ import AboutUs from "../pages/AboutUs";
 function RoutesApp() {
   return (
     <div className="App">
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router >
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Main />} exact/>
         </Routes>
         <Routes>
           <Route path="/login" element={<Login />} />

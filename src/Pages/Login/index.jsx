@@ -13,7 +13,7 @@ function Login() {
 
 
     if(user=== "_About_us_s" && pass === "190222"){
-      window.location="Inicio"
+      window.location="inicio"
     }
     else{
       setUserError("Escribe bien mi amor")

@@ -27,7 +27,7 @@ function Inicio() {
               <div className="details">
                 <h2>¿Te amo?</h2>
                 <p className="pMain">Es una de las preguntas que me haces con más frecuencia. Espero que pueda aclarar la duda.. </p>
-                <Link className="linkCard" to="/TeAmo"> Ver más</Link>
+                <Link className="linkCard" to="/teAmo"> Ver más</Link>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@ function Inicio() {
               <div className="details">
                 <h2>Felicidad...</h2>
                 <p className="pMain">¿Soy feliz? <br /> Quisiera compartir contigo lo que pienso al respecto. </p>
-                <Link className="linkCard" to="/Felicidad"> Ver más</Link>
+                <Link className="linkCard" to="/felicidad"> Ver más</Link>
               </div>
 
             </div>
@@ -54,7 +54,7 @@ function Inicio() {
               <div className="details">
                 <h2>¿Te interesa?</h2>
                 <p className="pMain">Realmente espero que te guste mi propuesta, es exclusiva para ti. <br /> Espero tu respuesta...</p>
-                <Link className="linkCard" to="/Te-interesa?"> Ver más</Link>
+                <Link className="linkCard" to="/te-interesa?"> Ver más</Link>
 
               </div>
             </div>

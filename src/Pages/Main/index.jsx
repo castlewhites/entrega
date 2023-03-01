@@ -21,7 +21,7 @@ function Main() {
             <h2>QUIERO CONSTRUIR<br /></h2>
             <h2>MI <span>VIDA</span></h2>
             <p>JUNTO A TI, ¿ACEPTAS?</p>
-            <Link className="link-button" to="/login">ACEPTO</Link>
+            <Link className="link-button" to="/inicio">ACEPTO</Link>
           </div>
           <div className="landing-img">
             <img src={pareja2} />

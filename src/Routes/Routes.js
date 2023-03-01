@@ -23,19 +23,19 @@ function RoutesApp() {
           <Route path="/" element={<Main />} />
         </Routes>
         <Routes>
-          <Route path="/Login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Routes>
-          <Route path="/Inicio" element={<Inicio />} />
+          <Route path="/inicio" element={<Inicio />} />
         </Routes>
         <Routes>
-          <Route path="/TeAmo" element={<TeAmo />} />
+          <Route path="/teAmo" element={<TeAmo />} />
         </Routes>
         <Routes>
-          <Route path="/Felicidad" element={<Felicidad />} />
+          <Route path="/felicidad" element={<Felicidad />} />
         </Routes>
         <Routes>
-          <Route path="/Te-interesa" element={<TeInteresa />} />
+          <Route path="/te-interesa" element={<TeInteresa />} />
         </Routes>
      {/*   
       

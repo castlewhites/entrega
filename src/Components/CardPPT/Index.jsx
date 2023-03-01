@@ -7,7 +7,7 @@ const CardPPT = ({ aciertos }) => {
 
   return (
     <>
-        <div className={aciertos === 1 ? "theCardPpt flipped" : "theCardPpt"}>
+        <div className={aciertos === 2 ? "theCardPpt flipped" : "theCardPpt"}>
           <div className="theFrontPpt">
             <img className="imgMsg" src={ejemplo} />
           </div>

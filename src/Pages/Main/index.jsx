@@ -13,7 +13,7 @@ function Main() {
         <header>
           <Link to="/" className="landing-logo">¿Te interesa?</Link>
           <ul className="landing-navBar">
-            <li><Link to="/Login" className="landing-navBar-link">Ingresar</Link></li>
+            <li><Link to="/login" className="landing-navBar-link">Ingresar</Link></li>
           </ul>
         </header>
         <div className="landing-content">
@@ -21,7 +21,7 @@ function Main() {
             <h2>QUIERO CONSTRUIR<br /></h2>
             <h2>MI <span>VIDA</span></h2>
             <p>JUNTO A TI, ¿ACEPTAS?</p>
-            <Link className="link-button" to="/Login">ACEPTO</Link>
+            <Link className="link-button" to="/login">ACEPTO</Link>
           </div>
           <div className="landing-img">
             <img src={pareja2} />

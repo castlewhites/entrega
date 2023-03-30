@@ -8,27 +8,24 @@ function Main() {
 
   return (
     <div className="landing">
-      <section className="landing-section">
-        <div className="landing-section-circle"></div>
-        <header>
-          <Link to="/" className="landing-logo">¿Te interesa?</Link>
-          <ul className="landing-navBar">
-            <li><Link to="/login" className="landing-navBar-link">Ingresar</Link></li>
-          </ul>
-        </header>
+        
         <div className="landing-content">
+        <div className="landing-img">
+          <img src={pareja2} />
+        </div>
           <div className="title-box">
             <h2>QUIERO CONSTRUIR<br /></h2>
             <h2>MI <span>VIDA</span></h2>
             <p>JUNTO A TI, ¿ACEPTAS?</p>
-            <Link className="link-button" to="/inicio">ACEPTO</Link>
           </div>
-          <div className="landing-img">
-            <img src={pareja2} />
-          </div>
+         
         </div>
+        <div className="content-button">
+          <Link className="link-button" to="/inicio">ACEPTO</Link>
+        </div>
+     
         <p className="since">&copy; DESDE 19-02-2022</p>
-      </section>
+
     </div>
 
   );

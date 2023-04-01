@@ -30,12 +30,14 @@
   width: 100%;
   height: 100vh;
   z-index: 40;
-  transition: 0.5s;
+  transition: 0.8s;
   transform: translateX(-100%);
+  opacity: 0;
 
 }
 .oculto{
   transform: translateX(0%);
+  opacity: 1;
 
 }
 

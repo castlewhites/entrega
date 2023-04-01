@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     gap: 80px 10px;
     margin-top: 70px;
+    padding: 15px 0;
     & .card{
       position: relative;
       width: 350px;
@@ -78,8 +79,9 @@
   content: "";
   position: absolute;
   inset: 3px;
-  background: $primary-color;
+  background: #ffbb7f;
 }
+
 .imgBx{
   position: absolute;
   width: 150px;
@@ -112,11 +114,12 @@
   background: linear-gradient(transparent, #f9f1f0,#f9f1f0,#f9f1f0, transparent);
   animation: animate2 9s linear infinite;
   animation-play-state: paused;
-
+  
  
 }
 .card:hover .imgBx::before{
   animation-play-state: running;
+
 }
 
 @keyframes animate2
@@ -128,11 +131,12 @@
     transform: translate(-50%, -50%) rotate(0deg);
   }
 }
+
 .imgBx::after{
   content: "";
   position: absolute;
   inset: 3px;
-  background-color: $primary-color;
+  background-color: #d4eaed;
  
 }
 .imgBx img{
@@ -169,7 +173,8 @@
 
 }
 h2{
-  font-weight: 600;
+  font-weight: bolder;
+  font-size: 30px;
   color: $secondary-colr;
   line-height: 1.2em;
   font-family: $lora;
@@ -180,9 +185,10 @@ h2{
   margin-top: 10px;
   opacity: 0;
   transition: 0.5s;
-  font-size: 14px;
-  color: #91512fc4;
-  font-family: $open;
+  font-size: 16px;
+  font-weight: bold;
+  color: $secondary-colr;
+  font-family: $lora;
 }
 .card:hover .pMain{
   opacity: 1;

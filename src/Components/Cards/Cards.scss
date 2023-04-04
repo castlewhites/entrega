@@ -28,11 +28,13 @@
 }
 
 .the-card{
+  width: 100%;
   position: absolute;
-  width: 410px;
+  bottom: 20px;
+  margin: 0 auto;
   height: 550px;
   transform-style: preserve-3d;
-  transition: 2s;
+  transition: 1s;
 }
 .the-front{
   position: absolute;

@@ -8,7 +8,6 @@ function Main() {
 
   return (
     <div className="landing">
-        
         <div className="landing-content">
         <div className="landing-img">
           <img src={pareja2} />

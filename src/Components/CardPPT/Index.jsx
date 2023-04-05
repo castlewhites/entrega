@@ -7,10 +7,7 @@ const CardPPT = ({ aciertos }) => {
 
   return (
     <>
-        <div className={aciertos === 2 ? "theCardPpt flipped" : "theCardPpt"}>
-          <div className="theFrontPpt">
-            <img className="imgMsg" src={ejemplo} />
-          </div>
+        <div className={aciertos === 3 ? "the-card flipped" : "the-card"}>
           <div className="the-back">
             <h2 className="titleMsg">NO LO SÉ.</h2>
             <p className="pMsg">

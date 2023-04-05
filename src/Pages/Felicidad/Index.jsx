@@ -88,26 +88,27 @@ function Felicidad() {
     <>
       <Header />
       <div className="main-containerTa">
-        <div className="boxGame">
-          <BoxGame
-            guide={gameState.guide}
-            playerOption={gameState.playerOption}
-            botOption={gameState.botOption}
-            gameState={gameState}
-            setGameState={setGameState}
-          />
+        {aciertos === 3 ?
+          <div className="sorpresa">
+            <CardPpt
+              aciertos={aciertos}
+              movimientos={movimientos}
+            />
+          </div>
 
-          {/* <div className="informacionPPT">
-            <h2 id="aciertos" className="estadisticasPPT">Aciertos: {aciertos}</h2>
-            <h2 id="movimientos" className="estadisticasPPT">Movimientos: {movimientos}</h2>
-          </div> */}
-        </div>
-        {/* <div className="sorpresa">
-          <CardPpt
-            aciertos={aciertos}
-            movimientos={movimientos}
-          />
-        </div> */}
+          :
+          <div className="boxGame">
+            <BoxGame
+              guide={gameState.guide}
+              playerOption={gameState.playerOption}
+              botOption={gameState.botOption}
+              gameState={gameState}
+              setGameState={setGameState}
+              movimientos={movimientos}
+              aciertos={aciertos} />
+
+          </div>
+        }
       </div>
 
     </>

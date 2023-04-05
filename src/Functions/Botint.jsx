@@ -1,7 +1,7 @@
 const botInt =  (gameState, setGameState) => {
 
   if(gameState.playerOption){
-    const number = Math.random()
+    const number = Math.random(1)
 
     setGameState({...gameState, botOption: 3})
 

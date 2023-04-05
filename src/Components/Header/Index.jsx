@@ -4,16 +4,29 @@ import "./Header.scss"
 
 function Header() {
 
+
+  function menu() {
+    const navToggle = document.getElementById('navItems');
+    navToggle.classList.toggle('oculto');
+
+  }
+
   return (
-    <header className="header-container">
-        <nav className="nav">
-          <ul>
-            <li><Link className="link" to="/Inicio">Inicio</Link> </li>
-            <li><Link className="link" to="/Inicio">About us</Link> </li>
-            <li><Link className="link" to="/"> Salir</Link></li>
-          </ul>
-        </nav>
-    </header>
+    <div className="navBar">
+      <div className="nav-logo">
+        SOULMATE
+      </div>
+      <div id="navItems" className="nav-items">
+        <Link className="nav-link" to="/inicio" onClick={menu}>INICIO</Link>
+        <Link className="nav-link" to='/inicio' >NOSOTROS</Link>
+        <Link className="nav-link" to='/'>SALIR</Link>
+      </div>
+      <div id="navToggle" onClick={menu} className="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   );
 }
 

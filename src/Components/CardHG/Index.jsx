@@ -7,9 +7,6 @@ const CardHG = ({ aciertos }) => {
     <>
       <div className="absolute">
         <div className={aciertos === 1 ? "the-card flipped" : "the-card"}>
-          <div className="the-front">
-            <img className="imgMsg" src={ejemplo} />
-          </div>
           <div className="the-back">
             <h2 className="titleMsg">¿SI?</h2>
             <p className="pMsg">

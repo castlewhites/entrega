@@ -16,7 +16,7 @@ function Inicio() {
   return (
     <>
       <Header />
-      <div className="main">
+      <div id="mainInit" className="main">
         < div className="main-container">
           <div className="card">
             <div className="lines"></div>

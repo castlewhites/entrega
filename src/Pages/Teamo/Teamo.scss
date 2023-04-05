@@ -3,55 +3,93 @@
 * {
   @extend .general
 }
-.main-container{
-  position: relative;
-  background-color: #fadbd9;
+
+.main-containerTa {
+
+  // position: relative;
+  // background-color: #fadbd9;
+  // min-height: 93vh;
+  // justify-content:space-around;
+  // align-items: center;
+  // display: flex;
+
+  flex-direction: column;
+  gap: 80px 10px;
+  padding: 15px 0;
   min-height: 93vh;
-  justify-content:space-around;
-  align-items: center;
-  display: flex;
-  padding: 20px 50px ;
-}
-.cards-container{
-  width: 410px;
-  height: 490px;
-  padding: 5px;
-  border-radius: 10px;
-/*   background-color: #37ddfa71 ; */
-  position: relative;
-  background-color: #8d49257c;
-  margin-right: 300px;
+  width: 100%;
+  min-width: 320px;
+  background-color: #fadcd9;
 
 }
-.memory-text{
-  padding: 9px;
+
+.cards-container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 400px;
+  height: 485px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: #8d49257c;
+  
 }
-.memory-title{
-  width: 400px;
+
+.memory-text {
+  padding: 9px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.memory-title {
+  width: 100%;
   text-align: center;
   font-family: $lora;
-  font-size: 45px;
+  font-size: 2.2rem;
   color: $secondary-colr;
 
 }
-.memory-subTitle{
+
+.memory-subTitle {
   font-size: 13px;
   font-family: $lora;
   color: $secondary-colr;
 
 }
-.informacion{
- /*  background-color:  #37ddfa71 ; */
-  width: 230px;
-  height: 267px;
-  position: absolute;
-  top: 120px;
-  right: -230px;
+
+.informacion, .informacionHG {
+  /*  background-color:  #37ddfa71 ; */
+  width: 100%;
+  max-width: 250px;
+  font-size: 17px;
+  margin: 0 auto;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   padding: 5px;
-  background-color: #8d49257c;
-  border-radius: 0 10px 10px 0;
+  color: #423332;
+  margin-top: 20px;
+
 }
-.estadisticas{
+.informacionHG{
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 0;
+  font-size: 1rem;
+  color:  #584241;
+  margin-bottom: 10px;
+
+  
+}
+.ocultar{
+  display: none;
+}
+
+/* .estadisticas {
   align-items: center;
   display: flex;
   border: 2px solid $secondary-colr;
@@ -64,8 +102,9 @@
   font-family: $lora;
   box-sizing: border-box;
 
-}
-.boxGuideA{
+} */
+
+.boxGuideA {
   width: 100%;
   height: 80px;
   color: #ffffd9;
@@ -77,33 +116,38 @@
   justify-content: center;
   align-items: center;
   background-color: $secondary-colr;
-  border-radius: 5px ;
+  border-radius: 5px;
 }
-.container-word{
+
+.container-word {
   padding: 30px;
   justify-content: center;
   margin-top: 40px;
   position: relative;
 }
-.letters{
+
+.letters {
   font-size: 30px;
   color: $secondary-colr;
-  
+
 }
-.line-letter{
+
+.line-letter {
   width: 30px;
   font-weight: 100;
   color: #fff;
   margin-right: 15px;
 }
-.container-hanged-btn{
-  position: absolute;
+
+.container-hanged-btn {
+
   left: 20px;
   top: 250px;
   padding: 10px;
 
 }
-.hanged-letters{
+
+.hanged-letters {
   width: 37px;
   height: 37px;
   margin: 3px;
@@ -111,12 +155,14 @@
   border: none;
   color: $secondary-colr;
 }
-.hanged-letters:hover{
+
+.hanged-letters:hover {
   transform: scale(1.2);
 }
-.reset-btn{
+
+.reset-btn {
   position: absolute;
-  top: 160px;
+  bottom: 40px;
   width: 70px;
   height: 30px;
   border-radius: 8px;
@@ -124,27 +170,51 @@
   border: none;
   color: $secondary-colr;
   background-color: #ffffd9;
-  left: calc(45% );
+  left: calc(45%);
   cursor: pointer;
   letter-spacing: 2px;
 }
-.reset-btn:hover{
+
+.reset-btn:hover {
   color: #ffffd9;
   background-color: $secondary-colr;
 }
-.note{
-  margin-top: 40px;
-  margin-left: 10px;
+
+.note {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  margin: 0 auto;
+  min-width: 300px;
+  margin-top: 100px;
   font-size: 16px;
   color: #fadbd9;
-  & span{
+
+  & span {
+    margin-left: 20px;
     font-size: 20px;
-    margin-left: 50px;
     color: $secondary-colr;
     background-color: #fadbd9;
     padding: 10px;
     border-radius: 10px;
     font-family: $lora;
     font-weight: 600;
+  }
+}
+.losed{
+  width: 100%;
+  min-height: 300px;
+}
+.losed h2{
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 400px) {
+  .memory-card {
+    width: calc(100px - 30px);
+  }
+  .cards-container{
+    max-width: 320px;
   }
 }

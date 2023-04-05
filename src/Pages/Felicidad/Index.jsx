@@ -12,8 +12,6 @@ let movimientos = 0
 
 function Felicidad() {
 
-
-
   const [gameState, setGameState] = useState({
     playerOption: null,
     botOption: null,
@@ -22,7 +20,7 @@ function Felicidad() {
   })
 
   useEffect(() => {
-    
+
   }, [])
 
   useEffect(() => {
@@ -35,6 +33,7 @@ function Felicidad() {
     }
 
   }, [gameState.botOption])
+
   const GameLogic = (gameState, setGameState) => {
 
     const { playerOption, botOption } = gameState;
@@ -44,21 +43,21 @@ function Felicidad() {
 
 
     if (playerOption === "PIEDRA" && botOption === "TIJERA") {
-      setGameState({ ...gameState, guide: winPlayer })
       aciertos = aciertos + 1
       movimientos = movimientos + 1
+      setGameState({ ...gameState, guide: winPlayer })
     }
     else if (playerOption === "PAPEL" && botOption === "PIEDRA") {
-      setGameState({ ...gameState, guide: winPlayer })
       aciertos = aciertos + 1
       movimientos = movimientos + 1
+      setGameState({ ...gameState, guide: winPlayer })
 
 
     }
     else if (playerOption === "TIJERA" && botOption === "PAPEL") {
-      setGameState({ ...gameState, guide: winPlayer })
       aciertos = aciertos + 1
       movimientos = movimientos + 1
+      setGameState({ ...gameState, guide: winPlayer })
 
     }
     else if (playerOption === botOption) {
@@ -67,49 +66,49 @@ function Felicidad() {
 
     }
     else if (playerOption === "TIJERA" && botOption === "PIEDRA") {
-      setGameState({ ...gameState, guide: winBot })
       movimientos = movimientos + 1
+      setGameState({ ...gameState, guide: winBot })
 
     }
     else if (playerOption === "PAPEL" && botOption === "TIJERA") {
-      setGameState({ ...gameState, guide: winBot })
       movimientos = movimientos + 1
+      setGameState({ ...gameState, guide: winBot })
 
     }
     else if (playerOption === "PIEDRA" && botOption === "PAPEL") {
-      setGameState({ ...gameState, guide: winBot })
       movimientos = movimientos + 1
+      setGameState({ ...gameState, guide: winBot })
 
     }
 
   }
-  
+
 
   return (
     <>
       <Header />
-      <div className="main-container">
-        <div className="boxGame">
-
-          <BoxGame 
-            guide={gameState.guide}
-            playerOption={gameState.playerOption}
-            botOption={gameState.botOption}
-            gameState={gameState}
-            setGameState={setGameState}
-          />
-
-          <div className="informacionPPT">
-            <h2 id="aciertos" className="estadisticasPPT">Aciertos: {aciertos}</h2>
-            <h2 id="movimientos" className="estadisticasPPT">Movimientos: {movimientos}</h2>
+      <div className="main-containerTa">
+        {aciertos === 3 ?
+          <div className="sorpresa">
+            <CardPpt
+              aciertos={aciertos}
+              movimientos={movimientos}
+            />
           </div>
-        </div>
-        <div className="sorpresa">
-          <CardPpt
-            aciertos={aciertos}
-            movimientos={movimientos}
-          />
-        </div>
+
+          :
+          <div className="boxGame">
+            <BoxGame
+              guide={gameState.guide}
+              playerOption={gameState.playerOption}
+              botOption={gameState.botOption}
+              gameState={gameState}
+              setGameState={setGameState}
+              movimientos={movimientos}
+              aciertos={aciertos} />
+
+          </div>
+        }
       </div>
 
     </>

@@ -4,14 +4,16 @@
   @extend .general
 }
 .boxGame{
-  width: 500px;
-  height: 600px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 600px;
+  margin: 0 auto;
   padding: 5px;
   border-radius: 10px;
-/*   background-color: #37ddfa71 ; */
   position: relative;
   background-color: #8d49257c;
-  margin-right: 300px;
+
 }
 .boxGuide{
   width: 100%;

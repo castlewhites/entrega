@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #d4ccc6;
+
 }
 
 .nav-logo {
@@ -27,7 +27,7 @@
   position: absolute;
   top: 60px;
   left: 0;
-  background-color: #ffb48a;
+  background-color: #fcfcda;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -60,9 +60,7 @@
 
 }
 
-.nav-items .nav-link:nth-child(1) {
-  border-top: 1px solid #633e29;
-}
+
 .nav-items .nav-link:active{
   transform: scale(1.1);
   background-color: #633e29;

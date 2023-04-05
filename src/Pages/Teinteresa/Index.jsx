@@ -8,9 +8,9 @@ import CardHG from "../../Components/CardHG/Index";
 
 
 function TeInteresa() {
-  const palabras = ["hermosa", "princesa", "preciosa", "brillante"];
+  const palabras = ["hermosa", "princesa", "preciosa", 'esposa', 'fe', 'feliz', 'viejos'];
   const [win, setWin] = useState(0);
-  
+
 
 
   const [palabra, setPalabra] = useState(palabras[Math.floor(Math.random() * palabras.length)].toUpperCase());
@@ -22,6 +22,8 @@ function TeInteresa() {
     if (letrasCorrectas.length === palabra.length) {
       setWin(1)
     }
+    console.log('1', letrasCorrectas);
+    console.log('2', palabra);
   }, [letrasAdivinadas, palabra]);
 
   const manejarIntento = (letra) => {
@@ -41,57 +43,55 @@ function TeInteresa() {
   return (
     <>
       <Header />
-      <div className="main-container">
-        <div>
-          <div className="memory-text">
-            <h1 className="memory-title">¿ESTÁS SEGURA?</h1>
-          </div>
-          <div className="cards-container">
-            <div className="">
-              <div className="boxGuideA">
-                <span>AHORCADO</span>
-              </div>
-              <div className="container-word">
-                {palabra.toUpperCase().split("").map((letra, index) => (
-                  <span className="letters" key={index}>
-                    {letrasAdivinadas.includes(letra) ? letra : <span className="line-letter">__ </span> }
-                  </span>
-                ))}
-              </div>
-              <div className="container-hanged-btn">
-                {intentos > 0 ? (
-                  "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("").map((letra, index) => (
-                    <button className="hanged-letters" key={index} onClick={() => manejarIntento(letra)}>
-                      {letra}
-                    </button>
-                  ))
-                ) : (
-                  <>
-                    <h2>¡HAS PERDIDO!</h2>
-                    <p className="note">LA PALABRA ERA: <span>{palabra}</span></p>
-                    <button className="reset-btn" onClick={Reset} >Reset</button>
-                  </>
-
-                )}
-              </div>
-            </div>
-
-
-            <div className="informacion">
-              <h2 id="aciertos" className="estadisticas">Intentos restantes: {intentos}</h2>
-              <h2 id="movimientos" className="estadisticas">Letras usadas: {letrasAdivinadas.join(", ")}</h2>
-            </div>
-          </div>
-        </div>
-        <div className="sorpresa">
+      <div className="main-containerTa">
+        {win === 1 ? <div className="sorpresa">
           <CardHG
             aciertos={win}
             title="POR SUPUESTO..."
           />
-        </div>
+        </div> : <>
+          <div className="memory-text">
+            <h1 className="memory-title">¿ESTÁS SEGURA?</h1>
+          </div>
+          <div className="informacionHG">
+            <p id="aciertos" className="estadisticas">Intentos Restantes: {intentos}</p>
+            <p id="movimientos" className="estadisticas">Letras usadas: {letrasAdivinadas.join(", ")}</p>
+          </div>
+          <div className="boxGame">
 
+            <div className="boxGuide">
+              <span>AHORCADO</span>
+            </div>
+
+            <div className={intentos === 0 ? "ocultar" : "container-word"}>
+
+              {palabra.toUpperCase().split("").map((letra, index) => (
+                <span className="letters" key={index}>
+                  {letrasAdivinadas.includes(letra) ? letra : <span className="line-letter">__ </span>}
+                </span>
+              ))}
+            </div>
+            <div className="container-hanged-btn">
+              {intentos > 0 ? (
+                "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("").map((letra, index) => (
+                  <button className="hanged-letters" key={index} onClick={() => manejarIntento(letra)}>
+                    {letra}
+                  </button>
+                ))
+              ) : (
+
+                <div className="losed">
+                  <h2>¡HAS PERDIDO!</h2>
+                  <p className="note">LA PALABRA ERA: <span>{palabra}</span></p>
+                  <button className="reset-btn" onClick={Reset} >Reset</button>
+                </div>
+              )}
+            </div>
+          </div>
+        </>}
 
       </div>
+
     </>
   );
 }

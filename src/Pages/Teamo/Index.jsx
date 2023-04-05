@@ -95,41 +95,40 @@ function TeAmo() {
     <>
       <Header />
       <div className="main-containerTa">
-        <div>
-         <div className="memory-text">
+        {aciertos === 8 ? "" : <div className="memory-text">
           <h1 className="memory-title">¿LISTA PARA DESCUBRIRLO?</h1>
-          </div>
-          { aciertos === 8 ? <di></di>  :  <div className="informacion">
-            <p id="aciertos" className="estadisticas">Aciertos: {aciertos}</p>
-            <p id="movimientos" className="estadisticas">Movimientos: {movimientos}</p>
-          </div>}
-          <div className={aciertos === 8 ? 'the-card' : "cards-container"}>
-            {
-              aciertos === 8 ?
-                <div className="sorpresa">
-                  <CardTA
-                    aciertos={aciertos}
-                    title="POR SUPUESTO..."
-                  />
-                </div> :
-                cards.map((card, index,) => (
-                  <Cards
-                    name={card.nameCard}
-                    frontFace={card.src}
-                    number={index}
-                    flipCard={flipCard}
-                    unflippedCard={unflippedCard}
-                    disabledCards={disabledCards}
-                  />
-
-                ))
-            }
-
-
-          </div>
         </div>
+        }
+        {aciertos === 8 ? <di></di> : <div className="informacion">
+          <p id="aciertos" className="estadisticas">Aciertos: {aciertos}</p>
+          <p id="movimientos" className="estadisticas">Movimientos: {movimientos}</p>
+        </div>}
+        <div className={aciertos === 8 ? 'the-card' : "cards-container"}>
+          {
+            aciertos === 8 ?
+              <>
+                <CardTA
+                  aciertos={aciertos}
+                  title="POR SUPUESTO..."
+                />
+              </> :
+              cards.map((card, index,) => (
+                <Cards
+                  name={card.nameCard}
+                  frontFace={card.src}
+                  number={index}
+                  flipCard={flipCard}
+                  unflippedCard={unflippedCard}
+                  disabledCards={disabledCards}
+                />
 
+              ))
+          }
+
+
+        </div>
       </div>
+
     </>
   );
 }
